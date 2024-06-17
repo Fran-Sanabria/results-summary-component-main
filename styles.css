@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500,700,800&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+:root {
+    --red: hsl(0, 100%, 67%);
+    --light-red: hsla(0, 100%, 67%, 0.05);
+    --yellow: hsl(39, 100%, 56%);
+    --light-yellow: hsla(39, 100%, 56%, 0.05);
+    --Green: hsl(166, 100%, 37%);
+    --light-green: hsla(166, 100%, 37%, 0.05);
+    --blue: hsl(234, 85%, 45%);
+    --light-blue: hsla(234, 85%, 45%, 0.05);
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+    --light-gray-blue: hsla(224, 30%, 27%, 0.5);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    background-color: var(--Pale-blue);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--White);
+    border-radius: 32px;
+    width: 375px;
+}
+
+.result {
+    background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+    border-radius: 0 0 32px 32px;
+    color: var(--White);
+    padding: 40px 0;
+}
+
+.result h2 {
+    color: var(--Light-lavender);
+    font-size: 18px;
+}
+
+.result>* {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.result-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+    margin: 20px auto;
+}
+
+.result-score h1 {
+    font-size: 56px;
+    margin: 0;
+}
+
+.result-score p {
+    font-weight: bold;
+    margin: 0;
+    color: var(--Light-lavender);
+
+}
+
+.message h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--White);
+}
+
+.message p {
+    font-weight: 500;
+    color: var(--Light-lavender);
+}
+
+.summary {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.summary h2 {
+    text-align: start;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--Dark-gray-blue);
+}
+
+.summary-score_item {
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.topic {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+.topic>img {
+    margin-right: 15px;
+}
+
+.reaction {
+    background-color: var(--light-red);
+    color: var(--red);
+}
+
+.memory {
+    background-color: var(--light-yellow);
+    color: var(--yellow);
+}
+
+.verbal {
+    background-color: var(--light-green);
+    color: var(--Green);
+}
+
+.visual {
+    background-color: var(--light-blue);
+    color: var(--blue);
+}
+
+.score {
+    color: var(--Dark-gray-blue);
+    font-weight: bold;
+}
+
+.score span {
+    color: var(--light-gray-blue)
+}
+
+
+.summary-button {
+    background-color: var(--Dark-gray-blue);
+    color: var(--White);
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 14px 40px;
+    margin-bottom: 20px;
+    border-radius: 32px;
+    cursor: pointer;
+    border: none;
+}
+
+@media (min-width: 800px) {
+    .p{
+        font-size: 18px;
+    }
+    .container{
+        flex-direction: row;
+        width: 736px;
+    }
+    .result{
+        border-radius: 32px;
+        width: 368px;
+    }
+    .result-score {
+        width: 200px;
+        height: 200px;
+    }
+    .result-score h1 {
+        font-size: 72px;
+    }
+    .result h2{
+        font-size: 24px;
+    }
+    .message h2{
+        font-size: 32px;
+    }
+    .summary-container{
+        width: 368px;
+    }
+    .summary h2{
+        font-size: 24px;
+    }
+    .summary-button{
+        margin: 30px auto;
+    }
+}
+
+.summary-button:hover {
+    background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+}
