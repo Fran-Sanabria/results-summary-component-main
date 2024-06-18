@@ -1,4 +1,4 @@
-import data from './data.json' assert {type: 'json'};
+import data from './data.json' with {type: 'json'};
 for (let i=0; i<data.length; i++){
     let icono = document.getElementById(`ic${[i]}`);
     let cat = document.getElementById(`cat${[i]}`)
